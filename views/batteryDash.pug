@@ -1,0 +1,416 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='/css/dash.css')
+  title Dashboard
+header
+  h1 Battery Dashboard
+.container
+  aside.sidebar
+    ul
+      li Register new ;
+      li
+        i.bx.bxs-car-battery 
+        a(href='/api/battery')   Battery
+      
+      li Add a service
+      li
+        a(href='/api/boda') 1. Bodas
+      li
+        a(href='/api/car') 2. Cars
+      li
+        a(href='/api/taxi') 3. Taxis
+      li 
+        a(href='/api/coaster') 4.Coaster
+      li 
+        a(href='/api/tyre') 5. Tyre
+      
+  main.content
+    .dash-content
+      .overview
+        .boxy
+          .box.box6
+            span.text Battery List
+            a(href='/api/batterylist')
+              button.check Check
+            
+          //- .box.box1
+          //-   span.text Cars
+          //-   span.number 8
+          //-   i.bx.bxs-car
+          //-   a(href='/api/carlist')
+          //-     button.check Check
+          //- .box.box2
+          //-   span.text Bodas
+          //-   span.number 120
+          //-   i.bx.bxs-car
+          //-   a(href='/api/list')
+          //-     button.check Check
+          //- .box.box3
+          //-   span.text Truck
+          //-   span.number 10
+          //-   i.bx.bxs-car
+          //-   a(href='/api/trucklist')
+          //-     button.check Check
+          //- .box.box4
+          //-   span.text Taxi
+          //-   span.number 10
+          //-   i.bx.bxs-car
+          //-   a(href='/api/taxilist')
+          //-     button.check Check
+          //- .box.box5
+          //-   span.text Coaster
+          //-   span.number 10
+          //-   i.bx.bxs-car
+          //-   a(href='/api/coasterlist')
+          //-     button.check Check
+footer.footer
+  .footer-content
+    p &copy; Amullon. All rights reserved.
+    ul.footer-links
+      li
+        a(href='#') Privacy Policy
+      li
+        a(href='#') Terms of Use
+      li
+        a(href='#') Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- doctype html
+//- head
+//-   meta(charset='UTF-8')
+//-   title Responsiive Admin Dashboard | CodingLab
+//-   link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css')
+//-   link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+//-   link(rel='stylesheet' href='/css/dash.css')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//- .sidebar
+//-   .logo-details.dock
+//-     i.bx.bxs-parking
+//-     span.logo_name DOCKVILLE
+//-   ul.nav-links
+//-     li
+//-       a(href='/api/taxilist')
+//-         i.bx.bxs-taxi
+//-         span.links_name Taxis
+//-     li
+//-       a(href='/api/carlist')
+//-        i.bx.bxs-car 
+//-        span.links_name Cars
+        
+//-     li
+//-       a(href='/api/list')
+//-         i.bx.bx-user
+//-         span.links_name Bodas
+//-     li
+//-       a(href='/api/trucklist')
+//-         i.bx.bx-car
+//-         span.links_name Trucks
+//-     li
+//-       a(href='/api/coasterlist')
+//-         i.bx.bx-taxi
+//-         span.links_name Coasters
+//-     li
+//-       a(href='#')
+//-         i.bx.bx-cog
+//-         span.links_name Setting
+//-     li
+//-       a.btn.btn-secondary(href="/api/logout") Logout 
+//-       //- span.links_name
+//- section.home-section
+//-   nav
+//-     .sidebar-button
+//-       i.bx.bx-menu.sidebarBtn
+//-       span.dashboard Parking 
+//-     .profile-details
+//-       img(src='/images/mln.jpg' alt='')
+//-       span.admin_name Mellon Amullon
+//-   section.dashboard
+//-   .dash-content
+//-     .overview
+//-       .title
+//-         span.text Total numbers signed in and out
+//-       .boxes
+//-         .box.box1
+//-           span.text  Vehichles in
+//-           span.number 125
+//-           i.bx.bxs-car
+//-           a(href='#')
+//-             button.check Check
+//-         .box.box2
+//-           span.text Vehiches out
+//-           span.number 120
+//-           i.bx.bxs-car-battery
+//-           a(href='#')
+//-             button.check Check
+//-         .box.box3
+//-           span.text Total income
+//-           span.number 1000000shs
+//-           i.bx.bxs-car-battery
+//-           a(href='#')
+//-             button.check Check
+        
+//-     ul.activity
+//-       li 
+//-         a(href='/api/car') Register Car
+//-       li 
+//-         a(href='/api/taxi') Register Taxi
+//-       li 
+//-         a(href='/api/truck') Register Truck
+//-       li 
+//-         a(href='/api/truck') Register Coaster
+//-       li 
+//-         a(href='/api/boda') Register Boda
+     
+//-   p.original original &copy;Amullon
+    
+//-     script.
+//-       let sidebar = document.querySelector(".sidebar");
+//-       let sidebarBtn = document.querySelector(".sidebarBtn");
+//-       sidebarBtn.onclick = function () {
+//-       sidebar.classList.toggle("active");
+//-       if (sidebar.classList.contains("active")) {
+//-       sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+//-       } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+//-       };
+
+
+
+
+//- doctype html
+//- head
+//-   meta(charset='UTF-8')
+//-   title Responsiive Admin Dashboard | CodingLab
+//-   link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css')
+//-   link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+//-   link(rel='stylesheet' href='/css/dash.css')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//- .sidebar
+//-   .logo-details.dock
+//-     span.logo_name DOCKVILLE
+//-   ul.nav-links
+//-     li
+//-       a(href='/api/taxilist')
+//-         i.bx.bxs-taxi
+//-         span.links_name Taxis
+//-     li
+//-       a(href='/api/carlist')
+//-        i.bx.bxs-car 
+//-        span.links_name Cars
+        
+//-     li
+//-       a(href='/api/list')
+//-         i.bx.bx-user
+//-         span.links_name Bodas
+//-     li
+//-       a(href='/api/trucklist')
+//-         i.bx.bx-car
+//-         span.links_name Trucks
+//-     li
+//-       a(href='/api/coasterlist')
+//-         i.bx.bx-taxi
+//-         span.links_name Coasters
+//-     li
+//-       a(href='#')
+//-         i.bx.bx-cog
+//-         span.links_name Setting
+//-     li
+//-       a.btn.btn-secondary(href="/api/logout") Logout 
+//-       //- span.links_name
+//- section.home-section
+//-   nav
+//-     .sidebar-button
+//-       i.bx.bx-menu.sidebarBtn
+//-       span.dashboard  Dashboard
+//-     .profile-details
+//-       img(src='/images/mln.jpg' alt='')
+//-       span.admin_name Mellon Amullon
+//-       i.bx.bx-chevron-down
+//-   section.dashboard
+//-   .top
+//-     i.uil.uil-bars.sidebar-toggle
+//-   .dash-content
+//-     .overview
+//-       .title
+//-         span.text Total numbers signed in and out
+//-       .boxes
+//-         .box.box1
+//-           span.text  Vehichles in
+//-           span.number 125
+//-           i.bx.bxs-car
+//-           a(href='#')
+//-             button.check Check
+//-         .box.box2
+//-           span.text Vehiches out
+//-           span.number 120
+//-           i.bx.bxs-car-battery
+//-           a(href='#')
+//-             button.check Check
+//-         .box.box3
+//-           span.text Total income
+//-           span.number 1000000shs
+//-           i.bx.bxs-car-battery
+//-           a(href='#')
+//-             button.check Check
+        
+//-     ul.activity
+//-       li 
+//-         a(href='/api/car') Register Car
+//-       li 
+//-         a(href='/api/taxi') Register Taxi
+//-       li 
+//-         a(href='/api/truck') Register Truck
+//-       li 
+//-         a(href='/api/truck') Register Coaster
+//-       li 
+//-         a(href='/api/boda') Register Boda
+     
+//-   p.original original &copy;Amullon
+    
+//-     script.
+//-       let sidebar = document.querySelector(".sidebar");
+//-       let sidebarBtn = document.querySelector(".sidebarBtn");
+//-       sidebarBtn.onclick = function () {
+//-       sidebar.classList.toggle("active");
+//-       if (sidebar.classList.contains("active")) {
+//-       sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+//-       } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+//-       };
+
+
+
+//- doctype html
+//- head
+//-   meta(charset='UTF-8')
+//-   title Responsiive Admin Dashboard | CodingLab
+//-   link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css')
+//-   link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+//-   link(rel='stylesheet' href='/css/dash.css')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//- .sidebar
+//-   .logo-details.dock
+//-     span.logo_name DOCKVILLE
+//-   ul.nav-links
+//-     li
+//-       a(href='/api/taxilist')
+//-         i.bx.bxs-taxi
+//-         span.links_name Taxis
+//-     li
+//-       a(href='/api/carlist')
+//-        i.bx.bxs-car 
+//-        span.links_name Cars
+        
+//-     li
+//-       a(href='/api/list')
+//-         i.bx.bx-user
+//-         span.links_name Bodas
+//-     li
+//-       a(href='/api/trucklist')
+//-         i.bx.bx-car
+//-         span.links_name Trucks
+//-     li
+//-       a(href='/api/coasterlist')
+//-         i.bx.bx-taxi
+//-         span.links_name Coasters
+//-     li
+//-       a(href='#')
+//-         i.bx.bx-cog
+//-         span.links_name Setting
+//-     li
+//-       a.btn.btn-secondary(href="/api/logout") Logout 
+//-       //- span.links_name
+//- section.home-section
+//-   nav
+//-     .sidebar-button
+//-       i.bx.bx-menu.sidebarBtn
+//-       span.dashboard  Dashboard
+//-     .profile-details
+//-       img(src='/images/mln.jpg' alt='')
+//-       span.admin_name Mellon Amullon
+//-       i.bx.bx-chevron-down
+//-   section.dashboard
+//-   .top
+//-     i.uil.uil-bars.sidebar-toggle
+//-   .dash-content
+//-     .overview
+//-       .title
+//-         span.text Total numbers signed in and out
+//-       .boxes
+//-         .box.box1
+//-           span.text  Vehichles in
+//-           span.number 125
+//-           i.bx.bxs-car
+//-           a(href='#')
+//-             button.check Check
+//-         .box.box2
+//-           span.text Vehiches out
+//-           span.number 120
+//-           i.bx.bxs-car-battery
+//-           a(href='#')
+//-             button.check Check
+//-         .box.box3
+//-           span.text Total income
+//-           span.number 1000000shs
+//-           i.bx.bxs-car-battery
+//-           a(href='#')
+//-             button.check Check
+        
+//-     ul.activity
+//-       li 
+//-         a(href='/api/car') Register Car
+//-       li 
+//-         a(href='/api/taxi') Register Taxi
+//-       li 
+//-         a(href='/api/truck') Register Truck
+//-       li 
+//-         a(href='/api/truck') Register Coaster
+//-       li 
+//-         a(href='/api/boda') Register Boda
+     
+//-   p.original original &copy;Amullon
+    
+//-     script.
+//-       let sidebar = document.querySelector(".sidebar");
+//-       let sidebarBtn = document.querySelector(".sidebarBtn");
+//-       sidebarBtn.onclick = function () {
+//-       sidebar.classList.toggle("active");
+//-       if (sidebar.classList.contains("active")) {
+//-       sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+//-       } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+//-       };

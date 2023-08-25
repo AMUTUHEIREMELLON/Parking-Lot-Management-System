@@ -1,0 +1,43 @@
+doctype html
+head
+  link(rel='stylesheet' href='/css/boda.css')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')
+  title Booking Form
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+.booking
+  h3 Bodaboda
+  form#formId(name='boda' action='/api/regboda' onsubmit='return Validate()' method='POST')
+    .row
+      .col
+        input#firstname.form-control(type='text' placeholder='First name' name='firstname')
+        span#firstnameError
+      .col
+        input#lastname.form-control(type='text' placeholder='Last name' aria-label='Last name' name='lastname')
+        span#lastnameError
+    .time
+      span#dateError
+      label#ingroupsizing.date Date
+      input#date.form-control(type='date' name='date')
+    .time
+      span#timeError
+      label#ingroup.color Time of arrival
+        input#time.form-control(type='time' name='time')
+    .slot
+      span#slotnumberError
+      label#slot-sizing.date Slot Number
+      input#slotnumber.form-control(type='number' name='slotnumber')
+    .slot
+      span#ninError
+      label#slot-sizing.nin NIN
+      input#nin.form-control(type='nin' name='nin')
+    br
+    select.form-select(aria-label='Default select example' name='cost') 
+      option(select='') Select Cost 
+      option(value='2000') 2000
+      option(value='3000') 3000
+      option(value='5000') 5000
+    br
+    button(type='submit' onsubmit='services.html') Sign Up
+  script(src='/js/boda.js')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js')

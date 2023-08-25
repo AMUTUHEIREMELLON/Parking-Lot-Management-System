@@ -1,0 +1,50 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/tyre.css')
+  title tyre clinc
+header.header
+form#formId.tyre.flex(name='tyre' action='/api/regtyre' onsubmit='return Validate();' method='POST')
+  h1.title Tyre purchase
+  //
+    <button class="button"><a href="signup.html">Signup</a></button>
+    <button class="button"><a href="log.html">Login</a></button>
+  .main
+    label(for='firstname') First name
+    input#firstname.input-field(type='text' name='firstname')
+    span#firstNameError
+  .main
+    label(for='lastname') Last name
+    input#lastname.input-field(type='text' name='lastname')
+    span#lastNameError
+  .main
+    label(for='contacts') Telephone
+    input.input-field(type='telephone' name='telephone')
+    span#contactsError
+  .main
+    label(for='date') Date
+    input.input-field(type='date' name='date')
+    span#dateError
+  .main
+    label(for='time') Time
+    input.input-field(type='time' name='time')
+    span#timeError
+  .main
+    label(for='model') Car Model
+    input.input-field(type='text'  name='model')
+    span#modelError
+  .main
+    label(for='size') Tyre Size
+    input.input-field(type='size' name='size')
+    span#sizeError
+  .main
+    label(for='tyre-number') Number of tyres
+    input.input-field(type='tyrenumber' name='tyrenumber')
+    span#tyreError
+  .main
+    label(for='cost') Cost
+    input.input-field(type='cost')
+    span#costError
+  script(src='/js/tyre.js')
+  button.button Submit

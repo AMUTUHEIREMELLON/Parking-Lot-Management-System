@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/battery.css')
+  title battery 
+header.header
+form#formId.battery.flex(name='battery' action='/api/regbattery' onsubmit='return Validate();' method='POST')
+  h1.title Battery purchase
+  .main
+    label(for='firstname') First name
+    input#firstname.input-field(type='text' name='firstname')
+    span#firstNameError
+  .main
+    label(for='lastname') Last name
+    input#lastname.input-field(type='text' name='lastname')
+    span#lastNameError
+  .main
+    label(for='contacts') Telephone
+    input.input-field(type='telephone' name='telephone')
+    span#contactsError
+  .main
+    label(for='date') Date
+    input.input-field(type='date' name='date')
+    span#dateError
+  .main
+    label(for='time') Time
+    input.input-field(type='time' name='time')
+    span#timeError
+  .main
+    label(for='model') Car Model
+    input.input-field(type='text'  name='model')
+    span#modelError
+  .main
+    label(for='size') Battery Size
+    input.input-field(type='size' name='size')
+    span#sizeError
+  .main
+    label(for='battery-number') Number of batterys
+    input.input-field(type='batterynumber' name='batterynumber')
+    span#batteryError
+  .main
+    label(for='cost') Cost
+    input.input-field(type='cost' name='cost')
+    span#costError
+  script(src='/js/battery.js')
+  button.button Submit

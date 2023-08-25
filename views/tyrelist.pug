@@ -1,0 +1,44 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous')
+table.table
+  thead.table-dark
+    h1 This is the total number of tyres: #{tyreCount}
+    tr
+      th(scope='col') Firstname
+      th(scope='col') Lastname
+      th(scope='col') telephone
+      th(scope='col') Date 
+      th(scope='col') Time
+      th(scope='col') Model
+      th(scope='col') Tyre Size
+      th(scope='col') Number of tyres 
+      th(scope='col') Cost
+      th(scope='col') Delete
+      th(scope='col') Edit 
+  tbody
+  if tyres.length 
+    each tyre in tyres
+      tr
+        td #{tyre.firstname}
+        td #{tyre.lastname}
+        td #{tyre.telephone}
+        td #{tyre.date}
+        td #{tyre.time}
+        td #{tyre.model}
+        td #{tyre.size}
+        td #{tyre.tyrenumber}
+        td #{tyre.cost}
+        td 
+            form(action="/api/tyre/delete" method="POST")
+              input(type="hidden", name="id", value=tyre._id)
+              button.btn.btn-danger(type="submit") Delete 
+        td 
+            a.btn.btn-warning(href="/api/tyre/edit/"+tyre._id) Edit
+            //- a(href=`/api/tyre/edit/${tyre._id}`)
+
+  else 
+    p there are no tyres in the database

@@ -1,0 +1,24 @@
+body{
+  background-image: url('/images/spla.avif');
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.booking{
+  max-width: 700px;
+  margin: 8px auto;
+  padding: 70px;
+  background-color: antiquewhite;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.slot{
+  font-weight: bold;
+}
+
+.time{
+  font-weight: bold;
+}

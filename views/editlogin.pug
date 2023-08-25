@@ -1,0 +1,59 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/login.css')
+  title My second project
+  h1(style='color: darkgreen') DOCKVILLE DAY AND NIGHT PARKING
+.login
+  nav.navbar.navbar-expand-lg.bg-body-tertiary
+    .container-fluid
+      a.navbar-brand(href='#') Navbar
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.me-auto.mb-2.mb-lg-0
+          li.nav-item
+            a.nav-link.active(aria-current='page' href='index.html') Home
+          //
+            <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+            </li>
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+              | Section
+            ul.dropdown-menu
+              li
+                a.dropdown-item(href='parking.html') Parking
+              li
+                a.dropdown-item(href='tireclinic.html') Tire clinic
+              li
+                hr.dropdown-divider
+              li
+                a.dropdown-item(href='battery,html') Battery section
+        form.d-flex(role='search')
+          input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+          button.btn.btn-outline-success(type='submit')
+            | Search
+  .login-form
+    form#formId(name='login' action='/api/reglogin/edit?id='+login._id  onsubmit='return Validate()' method='POST')
+      .mb-3
+        label(for='email') Email address
+        input#email.form-control(type='email' name='email' value=login.email)
+        span#emailError
+        #emailHelp.form-text Your email is private.
+      .mb-3
+        label.form-label(for='exampleInputPassword1') Password
+        input#exampleInputPassword1.form-control(type='password' name='password' value=login.password)
+        span#passwordError
+      .mb-3.form-check
+        input#exampleCheck1.form-check-input(type='checkbox')
+        label.form-check-label(for='exampleCheck1') Show password
+      button.btn.btn-primary(type='submit') Login
+      label
+        a(href='password.html') Forgot password?
+  p original &copy;Amullon
+  script(src='/js/login-validation.js')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js')
+  

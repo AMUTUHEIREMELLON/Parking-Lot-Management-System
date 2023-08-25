@@ -1,0 +1,43 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous')
+  link(rel='stylesheet' href='/css/dash.css')
+  table.table
+    thead.table-dark
+      h1 This is the total number of trucks: #{truckCount}
+      tr
+        th(scope='col') Firstname
+        th(scope='col') Lastname
+        th(scope='col') Car Model
+        th(scope='col') Car Number Plate
+        th(scope='col') Car Color 
+        th(scope='col') Date 
+        th(scope='col') Time of arrival 
+        th(scope='col') Slot Number
+        th(scope='col') Delete
+        th(scope='col') Edit 
+    tbody
+    if trucks.length 
+      each truck in trucks
+        tr
+          td #{truck.firstname}
+          td #{truck.lastname}
+          td #{truck.model}
+          td #{truck.numberplate}
+          td #{truck.color}
+          td #{truck.date}
+          td #{truck.time}
+          td #{truck.slotnumber}
+          td 
+              form(action="/api/truck/delete" method="POST")
+                input(type="hidden", name="id", value=truck._id)
+                button.btn.btn-danger(type="submit") Delete 
+          td 
+              a.btn.btn-warning(href="/api/truck/edit/"+truck._id) Edit
+              //- a(href=`/api/truck/edit/${truck._id}`)
+
+    else 
+      p there are no trucks in the database

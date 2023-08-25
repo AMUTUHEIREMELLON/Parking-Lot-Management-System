@@ -1,0 +1,52 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Parking
+  link(rel='stylesheet' href='/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/parking.css')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')
+ 
+.parking
+  .row.row-cols-1.row-cols-md-2.g-4
+    .col
+      .card 
+        h5.card-title Taxi
+        img.card-img-top(src='/images/taxi.webp' alt='...' style='height:200px;')
+        .card-body
+          a.card-link(href='/api/taxi') Book Now
+    .col
+      .card
+        h5.card-title Trucks
+        img.card-img-top(src='/images/Truck.jpg' alt='...' style='height:200px;')
+        .card-body
+          
+          
+          
+          a.card-link(href='/api/truck') Book Now
+    .col
+      .card
+        h5.card-title Personal Cars
+        img.card-img-top(src='/images/Toyota.jpg' alt='...' style='height:200px;')
+        .card-body
+          
+          
+          
+          a.card-link(href='/api/car') Book Now
+    .col
+      .card
+        h5.card-title Boda Bodas
+        img.card-img-top(src='/images/boda.jpg' alt='...' style='height:200px;')
+        .card-body
+          
+          
+          
+          a.card-link(href='/api/boda') Book Now
+      .col
+        .card
+          h5.card-title Coaster
+          img.card-img-top(src='/images/coaster.jpg' alt='...' style='height:200px;')
+          .card-body
+            
+            a.card-link(href='/api/coaster') Book Now
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js')

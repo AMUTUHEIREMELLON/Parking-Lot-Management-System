@@ -1,0 +1,27 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/login.css')
+  title My second project
+.login
+  .login-form
+    form#formId(name='login' action='/api/login' onsubmit='return Validate()' method='POST')
+      .mb-3
+        label(for='email') Email address
+        input#email.form-control(type='email' name='email')
+        span#emailError
+        #emailHelp.form-text Your email is private.
+      .mb-3
+        label.form-label(for='exampleInputPassword1') Password
+        input#exampleInputPassword1.form-control(type='password' name='password')
+        span#passwordError
+      .mb-3.form-check
+        input#exampleCheck1.form-check-input(type='checkbox')
+        label.form-check-label(for='exampleCheck1') Show password
+      button.btn.btn-primary(type='submit') Login
+  p.original original &copy;Amullon
+  script(src='/js/login-validation.js')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js')
+  // </html>

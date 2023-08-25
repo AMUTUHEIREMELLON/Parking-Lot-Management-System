@@ -1,0 +1,21 @@
+.table{
+  width: 1000px;
+  margin-left: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dock{
+  text-align: center;
+  color: antiquewhite;
+}
+
+body{
+  background-image: url('/images/spla.avif');
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}

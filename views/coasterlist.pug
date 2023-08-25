@@ -1,0 +1,42 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous')
+table.table
+  thead.table-dark
+
+    tr
+      th(scope='col') Firstname
+      th(scope='col') Lastname
+      th(scope='col') Car Model
+      th(scope='col') Car Number Plate
+      th(scope='col') Car Color 
+      th(scope='col') Date 
+      th(scope='col') Time of arrival 
+      th(scope='col') Slot Number
+      th(scope='col') Delete
+      th(scope='col') Edit 
+  tbody
+  if coasters.length 
+    each coaster in coasters
+      tr
+        td #{coaster.firstname}
+        td #{coaster.lastname}
+        td #{coaster.model}
+        td #{coaster.numberplate}
+        td #{coaster.color}
+        td #{coaster.date}
+        td #{coaster.time}
+        td #{coaster.slotnumber}
+        td 
+            form(action="/api/coaster/delete" method="POST")
+              input(type="hidden", name="id", value=coaster._id)
+              button.btn.btn-danger(type="submit") Delete 
+        td 
+            a.btn.btn-warning(href="/api/coaster/edit/"+coaster._id) Edit
+            //- a(href=`/api/coaster/edit/${coaster._id}`)
+
+  else 
+    p there are no coasters in the database

@@ -1,0 +1,38 @@
+body{
+  background-image: url('/images/spla.avif');
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.booking{
+  max-width: 600px;
+  margin: 8px auto;
+  padding: 50px;
+  background-color: antiquewhite;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.model{
+  font-weight: bold;
+}
+
+.car-number{
+  font-weight: bold;
+}
+
+.car-color{
+  font-weight: bold;
+}
+.date{
+  font-weight: bold;
+}
+
+.time{
+  font-weight: bold;
+}
+
+

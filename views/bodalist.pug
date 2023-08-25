@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous')
+.container
+  .row.mb-3
+    .col-md-6.offset-md-3
+      form(action='/api/search' method='post')
+        .input-group
+          input.form-control(type='text' name='search' placeholder='Search...')
+          button.btn.btn-primary.search(type='submit') Search
+table.table
+  thead.table-dark
+    h1 This is the total number of bodas: #{bodaCount}
+    tr
+      th(scope='col') Firstname
+      th(scope='col') Lastname
+      th(scope='col') Date 
+      th(scope='col') Time
+      th(scope='col') Slot Number
+      th(scope='col') NIN
+      th(scope='col') Cost
+      th(scope='col') Delete
+      th(scope='col') Edit 
+  tbody
+  if bodas.length 
+    each boda in bodas
+      tr
+        td #{boda.firstname}
+        td #{boda.lastname}
+        td #{boda.date}
+        td #{boda.time}
+        td #{boda.slotnumber}
+        td #{boda.nin}
+        td #{boda.cost}
+        td 
+            form(action="/api/boda/delete" method="POST")
+              input(type="hidden", name="id", value=boda._id)
+              button.btn.btn-danger(type="submit") Delete 
+        td 
+            a.btn.btn-warning(href="/api/boda/edit/"+boda._id) Edit
+            //- a(href=`/api/boda/edit/${boda._id}`)
+
+  else 
+    p there are no bodas in the database

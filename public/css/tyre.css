@@ -1,0 +1,136 @@
+/* header design */
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  width: 80px;
+  float: left;
+}
+
+
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.tyre {
+  /* box-shadow: 0 5px 20px  #ABB2B9; */
+  width: 800px;
+  /* height: 420px; */
+  margin: 20px auto;
+  background-color: antiquewhite;
+  margin-top: 105px;
+  border-radius: 15px;
+}
+
+.button {
+  width: 80px;
+  background-color: #6e9576;
+  margin-left: 150px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.input-field {
+  width: 500px;
+  height: 29px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  background-color: #fff;
+}
+
+.input-field input {
+  font-size: 10px;
+}
+
+.button {
+  border-radius: 4px;
+  margin-top: 18px;
+  margin-bottom: 25px;
+  height: 44px;
+  width: 500px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 29px;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: rgb(78, 168, 207);
+}
+
+.main {
+  margin: 22px auto;
+  margin-bottom: 2px;
+  align-items: center;
+  font-size: 24px;
+  color: black;
+}
+
+.title {
+  margin: 22px auto;
+  align-items: center;
+  font-size: 34px;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: -3px;
+}
+
+select {
+  width: 500px;
+  height: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+}
+
+/* unknown designs */
+
+/* div {
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+
+ .right {
+  width: 50%;
+  height: 200px;
+  background-color: lightgray;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.right {
+  display: none;
+}
+ */
+
+body {
+  background-image: url("/images/spla.avif");
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.clinic {
+  max-width: 400px;
+  margin: 8px auto;
+  padding: 20px;
+  background-color: antiquewhite;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
