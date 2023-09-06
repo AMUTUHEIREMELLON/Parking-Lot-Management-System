@@ -1,5 +1,5 @@
 .table{
-  width: 1000px;
+  width: 800px;
   margin-left: 100px;
   align-items: center;
   justify-content: center;
@@ -13,9 +13,18 @@
 
 body{
   background-image: url('/images/spla.avif');
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
   background-position: center;
+}
+
+.footer {
+  background-color: #060606;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 5px;
+  height: 150px;
 }

@@ -5,6 +5,7 @@ head
   title Document
   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous')
   link(rel='stylesheet' href='/css/list.css')
+  //- link(rel='stylesheet' href='/css/dash.css')
 .container
   .row.mb-3
     .col-md-6.offset-md-3
@@ -14,7 +15,7 @@ head
           button.btn.btn-primary.search(type='submit') Search
 table.table
   thead.table-dark
-    h1.dock This is the total number of cars: #{carCount}
+    h1.dock Total number of cars #{carCount}
     tr
       th(scope='col') Firstname
       th(scope='col') Lastname
@@ -24,6 +25,9 @@ table.table
       th(scope='col') Date 
       th(scope='col') Time of arrival 
       th(scope='col') Slot Number
+      th(scope='col') Type of Car 
+      th(scope='col') Services 
+      th(scope='col') Cost
       th(scope='col') Receipt
       th(scope='col') Delete
       th(scope='col') Edit 
@@ -39,6 +43,9 @@ table.table
         td #{car.date}
         td #{car.time}
         td #{car.slotnumber}
+        td #{car.cartype}
+        td #{car.services}
+        td #{car.cost}
         td 
             a.btn.btn-warning(href="/api/car/receipt/"+car._id) Print
         td 
@@ -48,6 +55,14 @@ table.table
         td 
             a.btn.btn-warning(href="/api/car/edit/"+car._id) Edit
             //- a(href=`/api/car/edit/${car._id}`)
+        
 
     else 
       p there are no cars in the database
+
+footer.footer
+  .footer-content
+    p &copy; Amullon. All rights reserved.
+    ul.footer-links
+      li 
+        a.btn.btn-primary(href="/api/dash")  Back

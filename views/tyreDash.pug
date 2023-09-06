@@ -10,31 +10,36 @@ header
 .container
   aside.sidebar
     ul
-      li Register new ;
+      li 
+      a(href='#') Register new ;
       li
         i.bx.bxs-car-tyre 
-        a(href='/api/tyre')   Tyre
+        a(href='/api/tyre') <> New Tyre 
+      li
+        i.bx.bxs-car-tyre 
+        a(href='/api/tyrelist') <> Tyre List
       
       li Add a service
       li
-        a(href='/api/boda') 1. Bodas
+        a(href='/api/car') 1. Cars
       li
-        a(href='/api/car') 2. Cars
+        a(href='/api/boda') 2. Boda
       li
-        a(href='/api/taxi') 3. Taxis
-      li 
-        a(href='/api/coaster') 4. Coaster
-      li 
-        a(href='/api/tyre') 5. Tyre
-      
+        a(href='/api/battery') 3. Battery
+      li.log_out
+      a(href='/api/logout')
+        i.bx.bx-log-out
+        span.links_name Log out
   main.content
-    .dash-content
-      .overview
-        .boxy
-          .box.box6
-            span.text Tyre List
-            a(href='/api/tyrelist')
-              button.check Check
+  .dash-content
+    .overview
+      .boxy
+        .box.box6
+          span.text Tire List
+          a(href='/api/tyrelist')
+            button.check Check
+    
+  
             
 footer.footer
   .footer-content

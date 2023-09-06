@@ -81,4 +81,16 @@ router.post("/regboda/edit", async (req, res) => {
   }
 });
 
+router.get("/boda/receipt/:id", async (req, res) => {
+  try {
+    const emp = await Boda.findOne({
+      _id: req.params.id,
+    });
+    res.render("bodar", { boda: emp });
+  } catch (error) {
+    res.status(400).send("Couldn't find boda in database");
+    console.log(error);
+  }
+});
+
 module.exports = router;

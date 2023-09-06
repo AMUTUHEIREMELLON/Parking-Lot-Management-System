@@ -31,7 +31,7 @@ const carSchema = new mongoose.Schema({
   },
   cartype: {
     type: String,
-    enum: ['Car', 'Truck', 'Taxi', 'Coaster']
+    // enum: ['Car', 'Truck', 'Taxi', 'Coaster']
   },
   services: {
     type: String,

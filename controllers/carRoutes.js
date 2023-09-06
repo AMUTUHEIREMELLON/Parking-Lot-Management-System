@@ -40,7 +40,11 @@ router.post('/car/search', async (req, res) => {
         { lastname: { $regex: searchTerm, $options: 'i' } },
         { model: { $regex: searchTerm, $options: 'i' } },
         { date: { $regex: searchTerm, $options: 'i' } },
-        { time: { $regex: searchTerm, $options: 'i' } }
+        { time: { $regex: searchTerm, $options: 'i' } },
+        { numberplate: { $regex: searchTerm, $options: 'i' } },
+        { color: { $regex: searchTerm, $options: 'i' } },
+        { services: { $regex: searchTerm, $options: 'i' } },
+        { cartype: { $regex: searchTerm, $options: 'i' } }
       ]
     });
 
@@ -67,7 +71,7 @@ router.get("/car/edit/:id", async (req, res) => {
     const car1 = await Car.findOne({
       _id: req.params.id,
     });
-    res.render("editcar", { car: car1 });
+    res.render("editcar.pug", { car: car1 });
   } catch (error) {
     res.status(400).send("Couldn't find car in database");
     console.log(error);

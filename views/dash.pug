@@ -1,78 +1,209 @@
 doctype html
 head
   meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Parking Dashboard
+  link(rel='stylesheet' href='public/css/dash.css')
   link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
   link(rel='stylesheet' href='/css/dash.css')
-  title Dashboard
-header
-  h1 Parking Dashboard
-.container
-  aside.sidebar
-    ul
-      li Register new ;
-      li
-        a(href='/api/car') <> Cars
-      li
-        a(href='/api/boda') <> Bodas
-      li
-        a(href='/api/truck') <> Trucks
-      li
-        a(href='/api/taxi') <> Taxis
-      li 
-        a(href='/api/coaster') <> Coaster
-      li Add a service 
-      li 
-        a(href='/api/tyre')  1. Tyre
-      li 
-        a(href='/api/battery')  2. Battery
-  main.content
-    h2 Check vehiche list
-    .dash-content
-      .overview
-        .boxes
-          .box.box1
-            span.text Cars
-            span.number 8
-            i.bx.bxs-car
-            a(href='/api/carlist')
-              button.check Check
-          .box.box2
-            span.text Bodas
-            span.number 120
-            i.bx.bxs-car
-            a(href='/api/list')
-              button.check Check
-          .box.box3
-            span.text Truck
-            span.number 10
-            i.bx.bxs-car
-            a(href='/api/trucklist')
-              button.check Check
-          .box.box4
-            span.text Taxi
-            span.number 10
-            i.bx.bxs-car
-            a(href='/api/taxilist')
-              button.check Check
-          .box.box5
-            span.text Coaster
-            span.number 10
-            i.bx.bxs-car
-            a(href='/api/coasterlist')
-              button.check Check
-footer.footer
-  .footer-content
-    p &copy; Amullon. All rights reserved.
-    ul.footer-links
-      li
-        a(href='#') Privacy Policy
-      li
-        a(href='#') Terms of Use
-      li
-        a(href='#') Contact Us
-      li 
-        a.btn.btn-primary(href="/api/logout") Logout 
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+.sidebar
+  .logo-details
+    span.logo_name DOCKVILLE
+  ul.nav-links
+    li
+      a.active(href='#')
+        i.bx.bx-grid-alt
+        span.links_name Dashboard
+    
+    li
+      a(href='/api/carlist')
+        i.bx.bx-list-ul
+        span.links_name Vehicle list
+    li
+      a(href='/api/car')
+        i.bx.bx-coin-stack
+        span.links_name Register new car
+    li
+      a(href='/api/boda')
+        i.bx.bx-coin-stack
+        span.links_name Register Boda
+    li
+      a(href='/api/list')
+        i.bx.bx-list-ul
+        span.links_name Boda List
+    //- li
+    //-   a(href='#')
+    //-     i.bx.bx-cog
+    //-     span.links_name Setting
+    li.log_out
+      a(href='/api/logout')
+        i.bx.bx-log-out
+        span.links_name Log out
+section.home-section
+  nav
+    .sidebar-button
+      i.bx.bx-menu.sidebarBtn
+      span.dashboard Parking
+    .search-box
+      input(type='text' placeholder='Search...')
+      i.bx.bx-search
+    .profile-details
+      img(src='/images/mln.jpg' alt='')
+      span.admin_name Mellon Amullon
+      i.bx.bx-chevron-down
+  .home-content
+    .overview-boxes
+      .box
+        .right-side
+          a(href='/api/index') 
+            
+            span.text Home
+       
+      .box
+        .right-side
+          .box-topic 
+          a(href='/api/car') Register car
+          //- .number Shs30000
+          //- .indicator
+            
+            span.text From morning
+       
+      //- .box
+      //-   .right-side
+      //-     .box-topic S
+      //-     .number 
+      //-     .indicator
+            
+      //-       span.text 
+      
+    .sales-boxes
+      .recent-sales.box
+        .title Recent 
+        .sales-details
+          ul.details
+            li.topic Date
+            li
+              a(href='#') 02 June 2023
+            li
+              a(href='#') 02 June 2023
+           
+          ul.details
+            li.topic Customer
+            li
+              a(href='#') Mellon	Amutuheire
+            li
+              a(href='#') Dave	Rizbon
+            
+          ul.details
+            li.topic Slots
+            li
+              a(href='#') 01
+            li
+              a(href='#') 02
+            
+          ul.details
+            li.topic Cost
+            li
+              a(href='#') Shs.3000
+            li
+              a(href='#') Shs.5000
+           
+        .button
+          a(href='/api/carlist') See All
+      .top-sales.box
+        .title Other sections
+        ul.top-sales-details
+          li
+            a(href='/api/battery')
+              img(src='/images/battery.webp' alt='')
+              span.product  Battery section
+            
+          li
+            a(href='/api/tyre')
+              img(src='/images/tire.jpg' alt='')
+              span.product Tyre clinic section
+         
+          
+//- script(src='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js')
+//- script.
+//-   let sidebar = document.querySelector(".sidebar");
+//-   let sidebarBtn = document.querySelector(".sidebarBtn");
+//-   sidebarBtn.onclick = function () {
+//-   sidebar.classList.toggle("active");
+//-   if (sidebar.classList.contains("active")) {
+//-   sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+//-   } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+//-   };
+
+
+
+//- doctype html
+//- head
+//-   meta(charset='UTF-8')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//-   link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+//-   title Dashboard
+//- header
+//-   h1 Parking Dashboard
+  
+  
+    
+//- .container
+//-   aside.sidebar
+//-     ul
+//-       li Register new ;
+//-       li
+//-         a(href='/api/car') <> Cars
+      
+//-       li Add a service 
+//-       li 
+//-         a(href='/api/tyre')  1. Tyre
+//-       li 
+//-         a(href='/api/battery')  2. Battery
+//-       ul.linkhead
+//-     li 
+//-       a(href='/api/index') < Home
+//-     li 
+//-       a(href='/api/logout')
+//-         button.logout Logout
+//-   main.content
+//-     h2.admin Welcome Admin
+//-     .dash-content
+//-       .overview
+//-         .boxes
+//-           .box.box1
+//-             span.text Check list
+//-             span.number #{carCount}
+//-             i.bx.bxs-car
+//-             a(href='/api/carlist')
+//-               button.check Check
+//-           .box.box2
+//-             span.text Total cost
+//-             span.number 16000
+            
+//-           .box.box3
+//-             span.text Likes
+//-             span.number 124
+            
+//- footer.footer
+//-   .footer-content
+//-     p &copy; Amullon. All rights reserved.
+//-     ul.footer-links
+//-       li
+//-         a(href='#') Privacy Policy
+//-       li
+//-         a(href='#') Terms of Use
+//-       li
+//-         a(href='#') Contact Us 
+//-         i.bx.bxs-envelope
+//-       li
+//-         a(hr)
+//-         i.bx.bx-like
+//-         .lie Like  
+
+
+    
+
 
 
 

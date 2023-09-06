@@ -24,10 +24,32 @@ router.post("/regtyre", async (req, res) => {
 router.get("/tyrelist", async (req, res) => {
   try {
     let items = await Tyre.find();
-    res.render("tyrelist.pug", { tyres: items });
+    const tyreCount = await Tyre.countDocuments();
+    res.render("tyrelist.pug", { tyres: items, tyreCount });
   } catch (error) {
     console.log(error);
     return res.status(400).send({ message: "Sorry could not get tyres" });
+  }
+});
+
+router.post('/tyre/search', async (req, res) => {
+  try {
+    const searchTerm = req.body.search.toLowerCase();
+    const item = await Tyre.find({
+      $or: [
+        { firstname: { $regex: searchTerm, $options: 'i' } },
+        { lastname: { $regex: searchTerm, $options: 'i' } },
+        { model: { $regex: searchTerm, $options: 'i' } },
+        { date: { $regex: searchTerm, $options: 'i' } },
+        { time: { $regex: searchTerm, $options: 'i' } },
+        { tyretype: { $regex: searchTerm, $options: 'i' } }
+      ]
+    });
+
+    res.render('tyrelist.pug', { tyres: item });
+  } catch (error) {
+    console.log(error);
+    return res.status(400).send({ message: "Could not perform search" });
   }
 });
 

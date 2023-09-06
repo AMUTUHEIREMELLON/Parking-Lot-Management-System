@@ -1,0 +1,24 @@
+doctype html
+head
+  link(rel='stylesheet' href='/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/receipt.css')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css')
+  title Receipt Form
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+.receipt
+    p.head Dockville day and night parking
+    h1 A receipt
+    p Name: #{boda.firstname} #{boda.lastname}  
+    p Time: #{boda.time}
+    p Date: #{boda.date}
+    p NIN: #{boda.nin}
+    p Cost: #{boda.cost}
+
+footer.footer
+  .footer-content
+    p &copy; Amullon. All rights reserved.
+    ul.footer-links
+      li 
+        a.btn.btn-primary(href="/api/dash")  Back

@@ -46,5 +46,14 @@ body{
   font-weight: bold !important;
 }
 
-
+.footer {
+  background-color: #060606;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 5px;
+  height: 150px;
+  width: 100%;
+  margin-top: 320px;
+}
 

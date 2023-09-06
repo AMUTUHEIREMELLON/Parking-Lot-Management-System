@@ -10,22 +10,29 @@ header
 .container
   aside.sidebar
     ul
-      li Register new ;
+      li
+        a(href='#') Register new ;
       li
         i.bx.bxs-car-battery 
-        a(href='/api/battery')   Battery
+        a(href='/api/battery')   <> Battery
+      li
+        i.bx.bxs-car-battery 
+        a(href='/api/batterylist')  <> Battery List
       
-      li Add a service
+      li 
+        a(href='#') Add a service
       li
         a(href='/api/boda') 1. Bodas
       li
         a(href='/api/car') 2. Cars
-      li
-        a(href='/api/taxi') 3. Taxis
-      li 
-        a(href='/api/coaster') 4.Coaster
       li 
         a(href='/api/tyre') 5. Tyre
+      li.log_out
+      a(href='/api/logout')
+        i.bx.bx-log-out
+        span.links_name Log out
+     
+      
       
   main.content
     .dash-content
