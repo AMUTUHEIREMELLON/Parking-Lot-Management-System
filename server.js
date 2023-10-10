@@ -3,7 +3,7 @@ const path = require("path");
 const dotenv = require("dotenv").config();
 const passport = require("passport");
 const connectdb = require("./config/dbConfig");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8020;
 
 const app = express();
 
